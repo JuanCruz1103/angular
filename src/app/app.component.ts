@@ -9,5 +9,5 @@ import { TarjetaProductoComponent } from "./tarjeta-producto/tarjeta-producto.co
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'app-angular';
+  title = 'Avances ';
 }
