@@ -8,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class ComponenteHijoComponent {
 
+  private titulo = "Orgullo UTS"
+
+
+  get mostrartitulo() {
+    return this.titulo;
+  }
+
+  gettitulo() {
+    return this.titulo;
+  }
+  
 }
+
