@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { ListadoUsuariosComponent } from './Components/listado-usuarios/listado-usuarios.component';
 //import { MostrarMensajeComponent } from './mostrar-mensaje/mostrar-mensaje.component';
 // import { TarjetaProductoComponent } from "./tarjeta-producto/tarjeta-producto.component";
 // import {InterpolacionComponent} from "./interpolacion/interpolacion.component"
 // import { ComponentePadreComponent } from './Componentes/componente-padre/componente-padre.component';
  //  import { ReplicadorComponent } from './replicador/replicador.component';
- import {Replicador2Component} from './replicador2/replicador2.component';
+
 @Component({
   selector: 'app-root',
-imports: [Replicador2Component],
+imports: [RouterOutlet,
+  ListadoUsuariosComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Avances ';
+  titulo = 'Servicios con Observables en Angular';
 }
