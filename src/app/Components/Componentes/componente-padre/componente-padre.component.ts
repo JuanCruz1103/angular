@@ -1,19 +1,15 @@
-import { Component } from '@angular/core';
-import { ComponenteHijoComponent } from './componente-hijo/componente-hijo.component';
-
+import { Component, ViewChild } from '@angular/core';
+import { HijoComponent } from "./hijo/hijo.component";
 @Component({
-  selector: 'app-componente-padre',
-  imports: [ComponenteHijoComponent],
-  templateUrl: './componente-padre.component.html',
-  styleUrl: './componente-padre.component.css'
+selector: 'app-padre',
+standalone: true,
+imports: [HijoComponent],
+templateUrl: './padre.component.html',
+styleUrl: './padre.component.css'
 })
-export class ComponentePadreComponent {
-  mensajePadre: string = 'Mensaje desde el Componente Padre';
-
-  mensaje: string = '';
-// Se emitió un str, es lo que recibimos
-recibirNotificacion(mensaje: string) {
-this.mensaje = mensaje;
+export class PadreComponent {
+@ViewChild(HijoComponent) componenteHijo!: HijoComponent;
+cambiarMensajeHijo() {
+this.componenteHijo.cambiarMensaje('Mensaje actualizado desde el Componente Padre');
 }
-
 }

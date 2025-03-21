@@ -1,14 +1,7 @@
-<p>papa</p>
-<app-componente-hijo></app-componente-hijo>
-<app-hijo [mensaje]="mensajePadre"></app-hijo>
-<p>Componente Padre</p>
-<app-hijo [mensaje]="mensajePadre"/>
-
 <div class="container">
     <h3 class="text-primary">Componente Padre</h3>
-    <app-hijo (notificarPadre)="recibirNotificacion($event)"></app-hijo>
-    @if (mensaje) {
-        <p class="mt-3 alert alert-info w-50 mx-auto">{{ mensaje }}</p>
-}
-</div>
-
+    <app-hijo></app-hijo>
+    <button class="btn btn-primary mt-3"
+    (click)="cambiarMensajeHijo()">Cambiar Mensaje del Hijo</button>
+    
+    </div>

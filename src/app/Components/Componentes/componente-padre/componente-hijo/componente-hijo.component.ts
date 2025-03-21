@@ -1,30 +1,15 @@
-import { Component, Input } from '@angular/core';
-import {  Output, EventEmitter } from '@angular/core';
-
-
+import { Component, EventEmitter, Output } from '@angular/core';
 @Component({
-  selector: 'app-componente-hijo',
-  imports: [],
-  templateUrl: './componente-hijo.component.html',
-  styleUrl: './componente-hijo.component.css'
+selector: 'app-hijo',
+standalone: true,
+imports: [],
+templateUrl: './hijo.component.html',
+styleUrl: './hijo.component.css'
 })
-export class ComponenteHijoComponent {
-  @Input() mensaje!: string;
-  private titulo = "Orgullo UTS"
-
-
-  get mostrartitulo() {
-    return this.titulo;
-  }
-
-  gettitulo() {
-    return this.titulo;
-  }
-  @Output() notificarPadre = new EventEmitter<string>();
-
-  enviarMensaje() {
-    // Emitir el evento con un mensaje (se emite un str)
-    this.notificarPadre.emit('Mensaje desde el Componente Hijo al Padre');
-  }
+export class HijoComponent {
+mensaje: string = 'Mensaje desde el componente hijo';
+cambiarMensaje(nuevoMensaje: string) {
+this.mensaje = nuevoMensaje;
+Ing. Rene Hernandez
 }
-
+}
