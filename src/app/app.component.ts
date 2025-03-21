@@ -1,19 +1,24 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ListadoUsuariosComponent } from './Components/listado-usuarios/listado-usuarios.component';
-//import { MostrarMensajeComponent } from './mostrar-mensaje/mostrar-mensaje.component';
-// import { TarjetaProductoComponent } from "./tarjeta-producto/tarjeta-producto.component";
-// import {InterpolacionComponent} from "./interpolacion/interpolacion.component"
-// import { ComponentePadreComponent } from './Componentes/componente-padre/componente-padre.component';
- //  import { ReplicadorComponent } from './replicador/replicador.component';
+
+import { MostrarMensajeComponent } from './Components/mostrar-mensaje/mostrar-mensaje.component';
+import { ComponentePadreComponent } from './Components/Componentes/componente-padre/componente-padre.component';
+import { NuevoComponenteComponent } from './Components/Componentes/nuevo-componente/nuevo-componente.component';
+import { ComponenteInlineComponent } from './Components/componente-inline/componente-inline.component';
 
 @Component({
   selector: 'app-root',
-imports: [RouterOutlet,
-  ListadoUsuariosComponent],
+  imports: [
+    RouterOutlet,
+    NuevoComponenteComponent,
+    ComponenteInlineComponent,
+    ComponentePadreComponent,
+    MostrarMensajeComponent
+    ],
+  
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  titulo = 'Servicios con Observables en Angular';
+titulo = 'Event Binding en Angular';
 }
